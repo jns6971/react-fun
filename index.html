@@ -24,7 +24,11 @@
         var NameComponent = React.createClass({
         	render: function(){
         		return(
-        			<h2>My name is {this.props.name}</h2>
+        			<div>
+        				<h2>My name is {this.props.name}</h2>
+        				<p>{this.props.children}</p>
+        			</div>
+        			
         		);
         	}
         });
@@ -34,7 +38,7 @@
         React.render(
         	<div>
         		<HelloComponent />
-        		<NameComponent name="Jordan" />
+        		<NameComponent name="Jordan">I am a web developer</NameComponent>
         	</div>, 
         	document.getElementById('content')
         );
